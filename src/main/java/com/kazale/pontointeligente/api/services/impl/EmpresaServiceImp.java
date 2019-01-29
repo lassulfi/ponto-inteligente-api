@@ -17,18 +17,18 @@ public class EmpresaServiceImp implements EmpresaService {
 	private static final Logger log = LoggerFactory.getLogger(EmpresaServiceImp.class);
 	
 	@Autowired
-	private EmpresaRepository EmpresaRepository;
+	private EmpresaRepository empresaRepository;
 	
 	@Override
 	public Optional<Empresa> buscarPorCnpj(String cnpj) {
 		log.info("Buscando uma empresa para o CNPJ {}", cnpj);
-		return Optional.ofNullable(EmpresaRepository.findByCnpj(cnpj));
+		return Optional.ofNullable(empresaRepository.findByCnpj(cnpj));
 	}
 
 	@Override
 	public Empresa persistir(Empresa empresa) {
 		log.info("Persistindo a empresa: {}", empresa);
-		return this.EmpresaRepository.save(empresa);
+		return this.empresaRepository.save(empresa);
 	}
 
 }
