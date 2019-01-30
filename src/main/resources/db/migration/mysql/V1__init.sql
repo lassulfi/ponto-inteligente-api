@@ -1,6 +1,6 @@
 create table `empresa` (
 	`id` bigint(20) not null,
-	`cnpf` varchar(255) not null,
+	`cnpj` varchar(255) not null,
 	`data_atualizacao` datetime not null,
 	`data_criacao` datetime not null,
 	`razao_social` varchar(255) not null
@@ -10,6 +10,7 @@ create table `funcionario`(
 	`id` bigint(20) not null,
 	`cpf` varchar(255) not null,
 	`data_atualizacao` datetime not null,
+	`data_criacao` datetime not null,
 	`email` varchar(255) not null,
 	`nome` varchar(255) not null,
 	`perfil` varchar(255) not null,
